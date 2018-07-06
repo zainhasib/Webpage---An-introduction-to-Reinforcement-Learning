@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Reinforcement Learning</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="box">
+                <h1>An Introduction to Reinforcement Learning</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="section-data">
+                <div class="sections-intro">
+                    <h2>From Wikipedia,</h2>
+                    <br> Reinforcement learning (RL) is an area of machine learning inspired by behaviourist psychology, concerned
+                    with how software agents ought to take actions in an environment so as to maximize some notion of cumulative
+                    reward.The problem, due to its generality, is studied in many other disciplines, such as game theory,
+                    control theory, operations research, information theory, simulation-based optimization, multi-agent systems,
+                    swarm intelligence, statistics and genetic algorithms. In the operations research and control literature,
+                    reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming.
+                </div>
+                <div class="sections">
+                    Reinforcement Learning is a branch of Machine Learning where an Agent learns how to behave in an environment by performing
+                    actions and seeing the results.In recent years, we’ve seen a lot of improvements in this fascinating
+                    area of research. Examples include
+                    <a href="https://deepmind.com/" target="_blank">DeepMind</a> and the Deep Q learning architecture in 2014, beating the champion of the game of Go with
+                    AlphaGo in 2016, OpenAI and the PPO in 2017, amongst others.
+                </div>
+                <div class="sections">
+                    <h2>The Idea behind,</h2>
+                    <br> The idea behind Reinforcement Learning is that an agent will learn from the environment by interacting
+                    with it and receiving rewards for performing actions.Reinforcement Learning is just a computational approach
+                    of learning from natural childly action.
+                </div>
+                <div class="sections">
+                    <img src="https://cdn-images-1.medium.com/max/1200/1*aKYFRoEmmKkybqJOvLt2JQ.png">
+                </div>
+                <div class="sections">
+                    Reinforcement Learning is based on the idea of the reward hypothesis. To have the best behavior, we need to maximize the
+                    expected cumulative reward.
+                    <br> The cumulative reward at each time step t can be written as: \begin{equation} G_t = R_{t+1} + R_{t+2} + \ldots \end{equation} or
+                    \begin{equation} G_t = \sum_{k=0}^T R_{t+k+1} \end{equation} <br>
+                    The rewards that come sooner (in the beginning of the game) are more probable to happen, since they are more predictable than the long term future reward. There a discount rate is needed,called gamma, to be put in order to achieve long term rewards in case of larger value of gamma and short term rewards in case of lesser value of gamma. Now the discounted reward is given by:
+                    \begin{equation} G_t = \sum\limits_{k=0}^{\infty} \gamma^k R_{t+k+1} \quad \text{where} \quad \gamma \in \mathopen{[} 0, 1 \mathclose{)} \end{equation}
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./bower_components/animejs/anime.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'],
+        ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { fonts: ["TeX"]
+        } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_CHTML">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
